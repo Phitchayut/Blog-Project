@@ -1,19 +1,19 @@
 import React from "react";
-import {NavLink} from 'react-router-dom'
+import {Link} from 'react-router-dom'
 
 const Navbar = () => {
   return (
     <nav>
       <ul className="nav nav-tabs mb-3 ">
         <li className="nav-item">
-          <NavLink className="nav-link" to="/">
+          <Link className="nav-link" to="/">
             หน้าแรก
-          </NavLink>
+          </Link>
         </li>
         <li className="nav-item">
-          <NavLink className="nav-link" to="/create">
+          <Link className="nav-link" to="/create">
             เขียนบทความ
-          </NavLink>
+          </Link>
         </li>
       </ul>
       <hr />

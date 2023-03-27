@@ -1,10 +1,14 @@
 import React from 'react'
-import ReactDOM from 'react-dom/client'
+import ReactDOM from 'react-dom'
 import MyRoute from './MyRoute'
+import {BrowserRouter as Router} from "react-router-dom"
 import './index.css'
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+ReactDOM.render(
   <React.StrictMode>
+       <Router>
     <MyRoute />
+    </Router>
   </React.StrictMode>,
-)
+  document.getElementById('root')
+);

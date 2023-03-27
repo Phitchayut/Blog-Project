@@ -16,7 +16,7 @@ const FormComponent = () => {
 
   const submitForm = (e) => {
     e.preventDefault();
-    axios.post(`http://localhost:5500/api/create`,{title,content,author})
+    axios.post(`${import.meta.env.VITE_APP_API}/create`,{title,content,author})
     .then(response=>{
       Swal.fire('สำเร็จ!','บันทึกข้อมูลเรียบร้อย!','success',)
       setState({...state,title:"",content:"",author:""})
