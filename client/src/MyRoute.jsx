@@ -4,6 +4,7 @@ import App from "./App"
 import FormComponent from "./components/FormComponent"
 import Detail from "./components/Detail"
 import Edit from "./components/Edit"
+import Login from "./components/Login"
 
 const MyRoute = () => {
   return (
@@ -12,6 +13,7 @@ const MyRoute = () => {
           <Route path="/create" exact component={FormComponent} />
           <Route path="/blog/:slug" exact component={Detail} />
           <Route path="/blog/edit/:slug" exact component={Edit} />
+          <Route path="/login" exact component={Login} />
       </Switch>
   )
 }

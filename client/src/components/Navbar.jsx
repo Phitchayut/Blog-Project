@@ -1,5 +1,6 @@
 import React from "react";
-import {Link} from 'react-router-dom'
+import { Link, withRouter } from "react-router-dom";
+import {getUser} from "../services/authorize";
 
 const Navbar = () => {
   return (
@@ -15,6 +16,15 @@ const Navbar = () => {
             เขียนบทความ
           </Link>
         </li>
+        {
+        !getUser() && (
+          <li className="nav-item">
+            <Link className="nav-link" to="/login">
+              เข้าสู่ระบบ
+            </Link>
+          </li>
+        )
+        }
       </ul>
       <hr />
     </nav>
